@@ -558,8 +558,13 @@ ink:function(c,t){
 },
 innovation:function(c,t){
 	if (!t.owner.sanctuary){
+		var pill = 0;
+		if (t.card.rarity == 0 ){
+		var pill = 1;
+		}
+
 		t.remove();
-		for(var i=0; i<3; i++){
+		for(var i=pill; i<3; i++){
 			t.owner.drawcard();
 		}
 	}
