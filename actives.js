@@ -343,6 +343,7 @@ enchant:function(c,t){
 },
 endow:function(c,t){
 	new TextEffect("Endow", tgtToPos(t));
+	c.active = {};
 	c.active = clone(t.active);
 	c.passives = clone(t.passives);
 	c.status = clone(t.status);
